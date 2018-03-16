@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Предложить заказ</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Название сервиса</a>
+
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="taskboard.html">Поиск заказа</a>
+            </li>
+            <li class="nav-item  active">
+                <a class="nav-link" href="makeOffer.html">Предложить заказ <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href=finance.html">Финансы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="settings.html">Настройки</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+      Сюда можно добавить тект
+    </span>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row justify-content-center p-2">
+        <h2>Предложить заказ</h2>
+    </div>
+
+        <div class="row justify-content-center ">
+        <div class="col-xl-6">
+            <form class="card p-2">
+                <div class="form-group">
+                    <label for="offerHeader">Заголовок</label>
+                    <input type="text" class="form-control" id="offerHeader" aria-describedby="offerHeaderHelp" placeholder="Введите заголовок">
+                    <small id="headerHelp" class="form-text text-muted">Выбирайте короткий и понятный заголовок</small>
+                </div>
+                <div class="form-group">
+                    <label for="offerCategory">Категория заказа</label>
+                    <select id="offerCategory" class="form-control">
+                        <option selected>Выберите категорию...</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="offerDescription">Описание заказа</label>
+                    <textarea class="form-control" id="offerDescription" rows="7" aria-describedby="offerDescriptionHelp"></textarea>
+                    <small id="offerDescriptionHelp" class="form-text text-muted">Подробно опишите требования к заказу</small>
+                </div>
+                <div class="form-group">
+                    <label for="offerDescription">Дополнительные файлы</label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile" aria-describedby="offerFileHelp">
+                        <label class="custom-file-label" for="customFile">Выберите файл</label>
+                    </div>
+                    <small id="offerFileHelp" class="form-text text-muted">Загрузите дополнительные файлы, если требуется</small>
+                </div>
+                <div class="form-group">
+                    <label for="offerDatetime">Срок выполнения</label>
+                    <input type="date" class="form-control" id="offerDatetime">
+                </div>
+                <div class="form-group">
+                    <label for="offerCost">Стоимость заказа</label>
+                    <input type="text" class="form-control" id="offerCost" placeholder="Введите стоимость заказа">
+                </div>
+                <div class="form-group">
+                    <label for="offerWay">Способ выполнения</label>
+                    <select id="offerWay" class="form-control">
+                        <option selected>Выберите способ выполнения</option>
+                        <option>Удаленно</option>
+                        <option>Лично</option>
+                        <option>Другой</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="offerContact">Способ связи</label>
+                    <select id="offerContact" class="form-control">
+                        <option selected>Выберите способ связи с исполнителем</option>
+                        <option>Интернет</option>
+                        <option>Сотовая связь</option>
+                        <option>Другой</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" type="submit">Предложить заказ</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
