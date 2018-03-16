@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Настройки профиля</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Название сервиса</a>
+
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Поиск заказа</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Предложить заказ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Финансы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Настройки</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+      Сюда можно добавить тект
+    </span>
+    </div>
+</nav>
+<div class="container">
+    <div class="row justify-content-center p-2">
+        <h2>Настройки профиля</h2>
+    </div>
+    <div class="card p-2">
+        <div class="row justify-content-center ">
+
+            <div class="col-3">
+                <img src="holder.js/200x200">
+                <button class="btn btn-info">Изменить фотографию</button>
+            </div>
+            <div class="col">
+                <h2>Имя: {firstName}</h2>
+                <input type="text" class="form-control" id="firstName" placeholder="{firstName}">
+                <h2>Фамилия: {lastName}</h2>
+                <input type="text" class="form-control" id="lastName" placeholder="{lastName}">
+                <h2>Адрес электрнной почты: {email}</h2>
+                <input type="text" class="form-control" id="email" placeholder="{email}">
+                <h2>Телефон: {phone}</h2>
+                <input type="email" class="form-control" id="phone" placeholder="{phone}">
+                <h2>Образование: {education}</h2>
+                <input type="text" class="form-control" id="education" placeholder="{education}">
+                <h2>Навыки: {skills}</h2>
+                <input type="text" class="form-control" id="skills" placeholder="{skills}">
+
+            </div>
+        </div>
+        <div class="row justify-content-center p-5">
+            <div class="col">
+                <h2>Дополнительная информация:</h2>
+                <div class="card p-2">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="{additionalInformation}"></textarea>
+                </div><br>
+                <h2>Изменение пароля:</h2>
+                <div class="card p-2">
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="oldPassword" placeholder="Старый пароль"><br>
+                        <input type="password" class="form-control" id="newPassword" placeholder="Новый пароль"><br>
+                        <input type="password" class="form-control" id="newPasswordCheck" placeholder="Новый пароль еще раз">
+                    </div>
+                </div>
+                <div class="text-center" style="margin: 1em;">
+                    <button class="btn btn-primary">Сохранить настройки</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
+</body>
+</html>

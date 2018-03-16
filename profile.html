@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль пользователя: {username}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Название сервиса</a>
+
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Поиск заказа</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Предложить заказ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Финансы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Настройки</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+      Сюда можно добавить тект
+    </span>
+    </div>
+</nav>
+<div class="container">
+    <div class="row justify-content-center p-2">
+        <h2>Профиль пользователя: {username}</h2>
+    </div>
+    <div class="card p-2">
+        <div class="row justify-content-center ">
+
+                <div class="col-3">
+                    <img src="holder.js/200x200">
+                </div>
+                <div class="col">
+                    <h2>Имя: {firstName}</h2>
+                    <h2>Фамилия: {lastName}</h2>
+                    <h2>Адрес электрнной почты: {email}</h2>
+                    <h2>Телефон: {phone}</h2>
+                    <h2>Образование: {education}</h2>
+                    <h2>Навыки: {skills}</h2>
+
+                </div>
+        </div>
+        <div class="row justify-content-center p-5">
+            <div class="col">
+                <h2>Дополнительная информация:</h2>
+                <div class="card p-2">
+                    <p>{additionalInformation}</p>
+                </div>
+                <h2>Статистика:</h2>
+                <div class="card p-2">
+                    <p>Заказано: {orderedTasks} заказов</p>
+                    <p>Выполнено заказов: {completedTasks}</p>
+                    <p>Рейтинг отзывов: {feedBackRating}</p>
+                </div>
+                <div class="text-center" style="margin: 1em;">
+                    <button class="btn btn-primary" type="submit">Открыть онлайн чат</button>
+                    <button class="btn btn-danger" type="submit">Пожаловаться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
+</body>
+</html>
