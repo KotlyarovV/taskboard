@@ -6,14 +6,38 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Название сервиса</a>
+
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Поиск заказа <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Предложить заказ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Финансы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Настройки</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+      Сюда можно добавить тект
+    </span>
+    </div>
+</nav>
+<br><br><br>
 <div class="container-fluid">
     <form>
         <div class="form-group col-sm-4">
-            <label for="login">Введите email или телефон</label>
+            <label for="login"><strong>Введите email или телефон</strong></label>
             <input type="text" id="login" class="form-control">
         </div>
         <div class="form-group col-sm-4">
-            <label for="password">Введите пароль</label>
+            <label for="password"><strong>Введите пароль</strong></label>
             <input type="password" id="password" class="form-control">
         </div>
         <div class="form-group col-sm-4">
