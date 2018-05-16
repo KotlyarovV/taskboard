@@ -1,0 +1,46 @@
+﻿@model TaskBoard.Models.User.UserModel
+@{
+    ViewData["Title"] = "Профиль";
+    Layout = "_BasicLayout";
+}
+
+<div class="container">
+    <div class="row justify-content-center p-2">
+        <h2>Профиль пользователя: @Model.Login</h2>
+    </div>
+    <div class="card p-2">
+        <div class="row justify-content-center ">
+
+            <div class="col-3">
+                <img src="/file/@Model.PhotoLink" width="200" height="200">
+            </div>
+            <div class="col">
+                <h2>Имя: @Model.Name</h2>
+                <h2>Фамилия: @Model.SecondName</h2>
+                <h2>Адрес электронной почты: @Model.Email</h2>
+                <h2>Телефон: @Model.Phone</h2>
+                <h2>Образование: @Model.Education</h2>
+                <h2>Навыки: @Model.InterestedTheme</h2>
+
+            </div>
+        </div>
+        <div class="row justify-content-center p-5">
+            <div class="col">
+                <h2>Дополнительная информация:</h2>
+                <div class="card p-2">
+                    <p>@Model.Information</p>
+                </div>
+                <h2>Статистика:</h2>
+                <div class="card p-2">
+                    <p>Заказано: @Model.WorksOrdered заказов</p>
+                    <p>Выполнено: @Model.WorksPerformed заказов</p>
+                </div>
+                <div class="text-center" style="margin: 1em;">
+                    <button class="btn btn-primary"  onclick="window.location.href='/profile/setting'">Редактировать информацию</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

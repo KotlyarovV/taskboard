@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Название сервиса</a>
+
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/taskboard/index">Поиск заказа <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/addorder/index">Предложить заказ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/money/index">Финансы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/profile/index">Мой профиль</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+            @ViewBag.MyOrders
+        </span>
+    </div>
+</nav>
+    @RenderBody()
+</body>
+</html>

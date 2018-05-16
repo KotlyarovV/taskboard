@@ -1,0 +1,60 @@
+﻿@model TaskBoard.Models.User.UserModel
+@{
+    ViewData["Title"] = "Setting";
+    Layout = "_BasicLayout";
+}
+<div class="container">
+    <div class="row justify-content-center p-2">
+        <h2>Настройки профиля</h2>
+    </div>
+    <div class="card p-2">
+        <form method="post" enctype="multipart/form-data" action="/profile/changesetting">
+            <div class="row justify-content-center ">
+                <div class="col-3">
+                    <img src="/file/@Model.PhotoLink" width="200" height="200">
+                    <label for="exampleInputFile">Изменить фото</label>
+                    <input type="file" id="exampleInputFile" name="Photo" accept=".png,.jpg,.jpeg">
+                </div>
+                <div class="col">
+                    <h2>Имя: @Model.Name</h2>
+                    <h2>Фамилия: @Model.SecondName</h2>
+                    <h2>Адрес электрнной почты: @Model.Email</h2>
+                    <input type="email" class="form-control" name="Email" id="email" placeholder="@Model.Email">
+                    <h2>Телефон: @Model.Phone</h2>
+                    <input type="number" class="form-control" id="phone" name="Phone" placeholder="@Model.Phone">
+                    <h2>Образование: @Model.Education</h2>
+                    <input type="text" class="form-control" id="education" name="Education" placeholder="@Model.Education">
+                    <h2>Навыки: @Model.InterestedTheme</h2>
+                    <select class="form-control" name="InterestedTheme" id="categories">
+                        <option selected disabled value="null">Выберите категорию...</option>
+                        <option value="Languages">Языки</option>
+                        <option value="Math">Математика</option>
+                        <option value="Phisic">Физика</option>
+                        <option value="PipeRepair">Починка труб</option>
+                    </select>
+                    <input type="hidden" value="@Model.PhotoLink" name="PhotoLink"/>
+                </div>
+            </div>
+            <div class="row justify-content-center p-5">
+                <div class="col">
+                    <h2>Дополнительная информация:</h2>
+                    <div class="card p-2">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="Information" placeholder="@Model.Information"></textarea>
+                    </div><br>
+                    <h2>Изменение пароля:</h2>
+                    <div class="card p-2">
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="oldPassword" name="OldPassword" placeholder="Старый пароль"><br>
+                            <input type="password" class="form-control" id="newPassword" name="Password" placeholder="Новый пароль"><br>
+                            <input type="password" class="form-control" id="newPasswordCheck" name="CheckNewPassword" placeholder="Новый пароль еще раз">
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin: 1em;">
+                        <button class="btn btn-primary" type="submit">Сохранить настройки</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

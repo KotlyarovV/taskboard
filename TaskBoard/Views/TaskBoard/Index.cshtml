@@ -1,0 +1,72 @@
+﻿@model IEnumerable<TaskBoard.Models.OrderModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_BasicLayout";
+}
+
+<div class="container-fluid">
+    <div class="table-responsive table-hover table-striped table-bordered">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Тема</th>
+                <th class="text-nowrap">Описание заказа</th>
+                <th>Стоимость</th>
+                <th class="text-nowrap"> Дата сдачи</th>
+                <th>Выложил</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            
+            <tr>
+                <th>
+                    Информатика
+                </th>
+                <td>
+                    Текста
+                </td>
+                <th class="text-nowrap">
+                    500 рублей.
+                </th>
+                <th class="text-nowrap">
+                    05.05.2066
+                </th>
+                <th>
+                    Илья Обломов
+                </th>
+                <th>
+                    <button type="button" class="btn btn-secondary">Откликнуться</button>
+                </th>
+            </tr>
+           
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <th>
+                        @order.Theme
+                    </th>
+                    <td>
+                        @order.Description
+                    </td>
+                    <th class="text-nowrap">
+                        @order.Value рублей.
+                    </th>
+                    <th class="text-nowrap">
+                        @order.Deadline
+                    </th>
+                    <th>
+                        @order.Owner
+                    </th>
+                    <th>
+                        <button type="button" class="btn btn-secondary">Откликнуться</button>
+                    </th>
+                </tr>
+            }
+           
+        </tbody>
+    </table>
+        </div>
+</div>
+
