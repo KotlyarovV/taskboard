@@ -23,17 +23,7 @@ namespace TaskBoard.Controllers
         public IActionResult Index()
         {
             string login = User.Identity.Name;
-            ViewData["login"] = login;
-            return View(_orderRepository.GetUserOrdersList(login));
-        }
-
-        [Authorize]
-        [HttpGet()]
-        public IActionResult Manage(long orderId)
-        {
-            ViewBag.OrderId = orderId; // todo: for debug
-            string login =  User.Identity.Name;
-            return View(_orderRepository.GetUserOrdersList(login));
+            return View(_orderRepository.GetUserOrdersList(login).Values);
         }
 
         // Possible CSRF leak
@@ -62,7 +52,7 @@ namespace TaskBoard.Controllers
             {
                 _orderRepository.UpdateOrder(login, orderModel);
             }
-            return Redirect("~/UserOrders/Edit");
+            return Redirect("~/UserOrders/Edit/"+orderModel.Id);
         }
 
         [Authorize]
@@ -79,6 +69,11 @@ namespace TaskBoard.Controllers
             string login = User.Identity.Name;
             if (_orderRepository.GetUserOrdersList(login).ContainsKey(orderId))
             {
+                if (!String.IsNullOrEmpty(_orderRepository.GetUserOrdersList(login)[orderId].Doer))
+                {
+                    ViewBag.Body = "Исполнитель уже выбран";
+                    return View("Message");
+                }
                 _orderRepository.GetUserOrdersList(login)[orderId].Doer = doerLogin;
             }
             return Redirect("~/UserOrders/Index");

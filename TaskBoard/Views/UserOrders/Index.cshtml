@@ -4,6 +4,9 @@
     Layout = "_BasicLayout";
     }
     <div class="container-fluid">
+        <div class="row justify-content-center p-2">
+            <h2>Список ваших заказов</h2>
+        </div>
         <div class="table-responsive table-hover table-striped table-bordered">
             <table class="table">
                 <thead>
@@ -12,34 +15,11 @@
                         <th class="text-nowrap">Описание заказа</th>
                         <th>Стоимость</th>
                         <th class="text-nowrap"> Дата сдачи</th>
-                        <th>Выложил</th>
-                        <th></th>
+                        <th>Исполнитель</th>
+                        <th>Действие</th>
                     </tr>
                 </thead>
                 <tbody>
-
-
-                    <tr>
-                        <th>
-                            Информатика
-                        </th>
-                        <td>
-                            Текста
-                        </td>
-                        <th class="text-nowrap">
-                            500 рублей.
-                        </th>
-                        <th class="text-nowrap">
-                            05.05.2066
-                        </th>
-                        <th>
-                            Илья Обломов
-                        </th>
-                        <th>
-                            <button type="button" class="btn btn-secondary">Управление заказом</button>
-                        </th>
-                    </tr>
-
                     @foreach (var order in Model)
             {
                     <tr>
@@ -50,16 +30,34 @@
                             @order.Description
                         </td>
                         <th class="text-nowrap">
-                            @order.Value рублей.
+                            @order.Value рублей
                         </th>
                         <th class="text-nowrap">
                             @order.Deadline
                         </th>
                         <th>
-                            @order.Owner
+                            @if (String.IsNullOrEmpty(order.Doer))
+                            {
+                                <a href="/userorders/ChooseDoer/@order.Id">Выбрать исполнителя</a>
+
+                            }else
+                            {
+                                @Html.Raw(order.Doer)
+                            }
+
                         </th>
                         <th>
-                            <<a href="/UserOrders/Manage/@order.Id" type="button" class="btn btn-secondary">Управление заказом</a>
+                            <a href="/UserOrders/Edit/@order.Id" type="button" class="btn btn-primary">Редактировать</a>
+                            @if (!String.IsNullOrEmpty(order.Doer))
+                            {
+                                <a href="/UserOrders/WorkBoard/@order.Id" type="button" class="btn btn-info">Работа с исполнителем</a>
+                            }
+                            else
+                            {
+                                <a href="/UserOrders/Delete/@order.Id" type="button" class="btn btn-danger">Удалить</a>
+
+                            }
+
                         </th>
                     </tr>
             }
