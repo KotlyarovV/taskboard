@@ -20,6 +20,7 @@ namespace TaskBoard
                 .AddSingleton<IFinanceRepository, FinanceRepository>()
                 .AddSingleton<IUserRepository, UserRepository>()
                 .AddSingleton<IOrderRepository, OrderRepository>()
+                .AddSingleton<IAdminRepository, AdminRepository>()
                 .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options => { options.LoginPath = new PathString("/Home/Login"); })
                 .Services

@@ -14,5 +14,6 @@ namespace TaskBoard.Data
         bool ExistenceVerification(string login);
         UserModel GetUser(string login);
         IUserRepository Update(string login, UserModel chacnges);
+        IEnumerable<UserModel> GetUsers();
     }
 }

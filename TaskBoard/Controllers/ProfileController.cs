@@ -33,6 +33,17 @@ namespace TaskBoard.Controllers
             return View(user);
         }
 
+        public IActionResult UserProfile(string login)
+        {
+            UserModel user = _userRepository.GetUser(login);
+            if (user == null)
+            {
+                ViewBag.Body = "Пользователь не найден.";
+                return View("Message");
+            }
+            return View("Index", user);
+        }
+
         public async Task<IActionResult> ChangeSetting(UserChangeSettingModel userChange)
         {
             var updatedUser = (UserModel) userChange;

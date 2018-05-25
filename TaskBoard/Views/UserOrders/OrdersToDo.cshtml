@@ -1,0 +1,50 @@
+﻿@model IEnumerable<TaskBoard.Models.OrderModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_BasicLayout";
+}
+<div class="container-fluid">
+    <div class="row justify-content-center p-2">
+        <h2>Список ваших заказов на выполнение</h2>
+    </div>
+    <div class="table-responsive table-hover table-striped table-bordered">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Тема</th>
+                    <th class="text-nowrap">Описание заказа</th>
+                    <th>Стоимость</th>
+                    <th class="text-nowrap"> Дата сдачи</th>
+                    <th>Заказчик</th>
+                    <th>Действие</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model)
+                {
+                    <tr>
+                        <th>
+                            @order.Theme
+                        </th>
+                        <td>
+                            @order.Description
+                        </td>
+                        <th class="text-nowrap">
+                            @order.Value рублей
+                        </th>
+                        <th class="text-nowrap">
+                            @order.Deadline
+                        </th>
+                        <th>
+                            @order.Owner
+                        </th>
+                        <th>
+                            <a href="/UserOrders/WorkBoard?orderId=@order.Id&owner=@order.Owner" type="button" class="btn btn-info">Работа с заказчиком</a>
+                        </th>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>

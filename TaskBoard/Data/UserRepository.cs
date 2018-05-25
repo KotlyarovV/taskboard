@@ -49,5 +49,10 @@ namespace TaskBoard.Data
             registrations.Add(user);
             return this;
         }
+
+        public IEnumerable<UserModel> GetUsers()
+        {
+            return registrations;
+        }
     }
 }

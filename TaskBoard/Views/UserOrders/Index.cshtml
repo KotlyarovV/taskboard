@@ -50,7 +50,7 @@
                             <a href="/UserOrders/Edit/@order.Id" type="button" class="btn btn-primary">Редактировать</a>
                             @if (!String.IsNullOrEmpty(order.Doer))
                             {
-                                <a href="/UserOrders/WorkBoard/@order.Id" type="button" class="btn btn-info">Работа с исполнителем</a>
+                                <a href="/UserOrders/WorkBoard?orderId=@order.Id&owner=@order.Owner" type="button" class="btn btn-info">Работа с исполнителем</a>
                             }
                             else
                             {

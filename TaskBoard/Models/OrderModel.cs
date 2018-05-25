@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using TaskBoard.Models.Enums;
 
@@ -10,6 +11,8 @@ namespace TaskBoard.Models
         public string Owner { get; set; }
         public string Header { get; set; }
         public string Doer { get; set; }
+        public IEnumerable<string> DoerCandidates { get; set; }
+        public bool IsCompleted { get; set; } = false;
 
         [Required]
         public OrderTheme Theme { get; set; }

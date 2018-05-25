@@ -18,32 +18,10 @@
             </tr>
         </thead>
         <tbody>
-            
-            
-            <tr>
-                <th>
-                    Информатика
-                </th>
-                <td>
-                    Текста
-                </td>
-                <th class="text-nowrap">
-                    500 рублей.
-                </th>
-                <th class="text-nowrap">
-                    05.05.2066
-                </th>
-                <th>
-                    Илья Обломов
-                </th>
-                <th>
-                    <button type="button" class="btn btn-secondary">Откликнуться</button>
-                </th>
-            </tr>
-           
             @foreach (var order in Model)
             {
-                <tr>
+                if (String.IsNullOrEmpty(order.Doer))
+                {<tr>
                     <th>
                         @order.Theme
                     </th>
@@ -59,10 +37,13 @@
                     <th>
                         @order.Owner
                     </th>
+            
                     <th>
-                        <button type="button" class="btn btn-secondary">Откликнуться</button>
+                        <a href="/UserOrders/ApplyAsDoer?orderId=@order.Id&doerLogin=@ViewBag.UserLogin&ownerLogin=@order.Owner" type="button" class="btn btn-secondary">Откликнуться</a>
                     </th>
-                </tr>
+                </tr> 
+                }
+
             }
            
         </tbody>
