@@ -20,12 +20,13 @@ namespace TaskBoard.Controllers
             _orderRepository = orderRepository;
         }
         // GET: /<controller>/
-        [Authorize]
+        [Authorize(Roles = "user")]
         public IActionResult Index()
         {
+            ViewBag.UserLogin = User.Identity.Name;
             var role = User.FindFirst(ClaimTypes.Role).Value;
             ViewData["login"] = role + " " + User.Identity.Name;
-            return View(_orderRepository.GetOrdersList(0));
+            return View(_orderRepository.GetOrdersList(0).Where(orderModel => !orderModel.IsCompleted));
         }
     }
 }

@@ -1008,3 +1008,5 @@ C:\Users\User\Desktop\gipo\taskboard\TaskBoard\obj\Debug\net462\TaskBoard.Assemb
 C:\Users\User\Desktop\gipo\taskboard\TaskBoard\obj\Debug\net462\TaskBoard.csproj.CopyComplete
 C:\Users\User\Desktop\gipo\taskboard\TaskBoard\obj\Debug\net462\TaskBoard.exe
 C:\Users\User\Desktop\gipo\taskboard\TaskBoard\obj\Debug\net462\TaskBoard.pdb
+C:\Users\User\Desktop\gipo\taskboard\TaskBoard\bin\Debug\net462\Microsoft.Office.Interop.Excel.dll
+C:\Users\User\Desktop\gipo\taskboard\TaskBoard\bin\Debug\net462\Microsoft.Office.Interop.Word.dll

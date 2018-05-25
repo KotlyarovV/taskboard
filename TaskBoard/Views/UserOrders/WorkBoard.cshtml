@@ -1,7 +1,40 @@
-﻿
+﻿@model TaskBoard.Models.OrderModel
 @{
     ViewData["Title"] = "WorkBoard";
+    Layout = "_BasicLayout";
 }
-
-<h2>WorkBoard</h2>
+<script src="https://cdn.rawgit.com/imsky/holder/master/holder.js"></script>
+<div class="container-fluid">
+    <div class="row justify-content-center p-2">
+        <h2>Работа с заказом</h2>
+    </div>
+    <div class="row justify-content-center ">
+        <div class="col col-7">
+            <div class="card p-2">
+                <img src="holder.js/1024x600">
+            </div>
+        </div>
+        <div class="col">
+            <div class="card p-2">
+                <h3>Информация о заказе:</h3>
+                <p>Статус: @if (Model.IsCompleted)
+                { <b>выполнен</b> }
+                else { <b>в работе</b>}</p>
+                <p>Закачик: @Model.Owner</p>
+                <p>Исполнитель: @Model.Doer</p>
+                <p>Срок выполнения: @Model.Deadline.ToString()</p>
+                <p>Стоимость: @Model.Value</p>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center ">
+        <div class="col-6">
+            @if (ViewBag.isOwner && !Model.IsCompleted)
+            {
+                <br />
+            <a href="/userorders/accept?orderId=@Model.Id" class="btn btn-primary" type="submit">Принять заказ</a>
+            }
+        </div>
+    </div>
+</div>
 
