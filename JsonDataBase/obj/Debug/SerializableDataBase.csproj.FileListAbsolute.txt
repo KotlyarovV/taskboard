@@ -102,3 +102,10 @@ C:\Users\Vitaly\source\repos\TaskBoard\JsonDataBase\obj\Debug\SerializableDataBa
 C:\Users\Vitaly\source\repos\TaskBoard\JsonDataBase\obj\Debug\SerializableDataBase.csproj.CoreCompileInputs.cache
 C:\Users\Vitaly\source\repos\TaskBoard\JsonDataBase\obj\Debug\JsonDataBase.dll
 C:\Users\Vitaly\source\repos\TaskBoard\JsonDataBase\obj\Debug\JsonDataBase.pdb
+C:\Users\User\Desktop\taskboard-master\taskboard-master\JsonDataBase\bin\Debug\JsonDataBase.dll
+C:\Users\User\Desktop\taskboard-master\taskboard-master\JsonDataBase\bin\Debug\JsonDataBase.pdb
+C:\Users\User\Desktop\taskboard-master\taskboard-master\JsonDataBase\obj\Debug\SerializableDataBase.csprojAssemblyReference.cache
+C:\Users\User\Desktop\taskboard-master\taskboard-master\JsonDataBase\obj\Debug\SerializableDataBase.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\taskboard-master\taskboard-master\JsonDataBase\obj\Debug\SerializableDataBase.csproj.CopyComplete
+C:\Users\User\Desktop\taskboard-master\taskboard-master\JsonDataBase\obj\Debug\JsonDataBase.dll
+C:\Users\User\Desktop\taskboard-master\taskboard-master\JsonDataBase\obj\Debug\JsonDataBase.pdb

@@ -25,7 +25,7 @@ namespace TaskBoard.Controllers
         {
             var role = User.FindFirst(ClaimTypes.Role).Value;
             ViewData["login"] = role + " " + User.Identity.Name;
-            return View(_orderRepository.GetOrdersList(1));
+            return View(_orderRepository.GetOrdersList(0));
         }
     }
 }

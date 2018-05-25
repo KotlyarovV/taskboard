@@ -6,8 +6,10 @@ namespace TaskBoard.Models
 {
     public class OrderModel
     {
+        public long Id { get; set; }
         public string Owner { get; set; }
         public string Header { get; set; }
+        public string Doer { get; set; }
 
         [Required]
         public OrderTheme Theme { get; set; }
