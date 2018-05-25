@@ -10,5 +10,8 @@ namespace TaskBoard.Data
     {
         IOrderRepository SaveOrder(string owner, OrderModel orderModel);
         IEnumerable<OrderModel> GetOrdersList(int listNumber);
+        Dictionary<long, OrderModel> GetUserOrdersList(string owner);
+        bool RemoveOrder(string owner, long orderId);
+        bool UpdateOrder(string owner, OrderModel orderModel);
     }
 }

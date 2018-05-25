@@ -46,6 +46,7 @@
           "System.Runtime.Serialization": "4.0.0.0",
           "System.Security": "4.0.0.0",
           "System.Web.Extensions": "4.0.0.0",
+          "System.Xaml": "4.0.0.0",
           "System.Xml": "4.0.0.0",
           "System.Xml.Linq": "4.0.0.0",
           "System.Reflection.Emit": "0.0.0.0",
@@ -222,6 +223,11 @@
       "System.Web.Extensions/4.0.0.0": {
         "compile": {
           ".NETFramework/v4.6.2/System.Web.Extensions.dll": {}
+        }
+      },
+      "System.Xaml/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.6.2/System.Xaml.dll": {}
         }
       },
       "System.Xml/4.0.0.0": {
@@ -2078,6 +2084,7 @@
           "System.Runtime.Serialization": "4.0.0.0",
           "System.Security": "4.0.0.0",
           "System.Web.Extensions": "4.0.0.0",
+          "System.Xaml": "4.0.0.0",
           "System.Xml": "4.0.0.0",
           "System.Xml.Linq": "4.0.0.0",
           "System.Reflection.Emit": "0.0.0.0",
@@ -4602,7 +4609,7 @@
     "System.Security.Cryptography.Xml/4.4.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1m+fKVrApgKYMRuE0MF0vGjqy4XqAp1rCtyAzMXhJajMDDytMh/rHk9hp4M7KKk3QQZoWJUvyUY7xcw74w+JiQ==",
+      "sha512": "sha512-q9Dren/YP5jhRCkDvLfuaPpMTQzP97ANvzq/OoGgwK8YdLRSTABS9oW5/23OKoM2DRCuBrh4qaecD2YNhPtuzQ==",
       "path": "system.security.cryptography.xml/4.4.2",
       "hashPath": "system.security.cryptography.xml.4.4.2.nupkg.sha512"
     },
@@ -4784,6 +4791,11 @@
       "sha512": ""
     },
     "System.Web.Extensions/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Xaml/4.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
