@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "ChooseDoer";
+    Layout = "_BasicLayout";
+}
+
+<div class="container-fluid">
+    <div class="row justify-content-center p-2">
+        <h2>Выбор исполнителя</h2>
+    </div>
+    <div class="table-responsive table-hover table-striped table-bordered">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Логин исполнителя</th>
+                    <th class="text-nowrap">Имя исполнителя</th>
+                    <th>Предложенная стоимость</th>
+                    <th class="text-nowrap"> Рейтинг</th>
+                    <th>Действие</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- foreach (var order in Model) -->
+                <!-- { -->
+                <tr>
+                    <th>
+                        <a href="/users/login">pupkin</a>
+                    </th>
+                    <td>
+                        Василий Генадьевич
+                    </td>
+                    <th class="text-nowrap">
+                        100 рублей
+                    </th>
+                    <th>
+                        100%
+                    </th>
+                    <th>
+                        <a href="/useroders/choosedoer?orderId=&doerLogin=" type="button" class="btn btn-info">Выбрать в качестве исполнителя</a>
+
+                    </th>
+                </tr>
+                <!-- } -->
+
+                </tbody>
+            </table>
+        </div>
+    </div>

@@ -55,6 +55,7 @@ namespace TaskBoard.Data
 
         public Dictionary<long, OrderModel> GetUserOrdersList(string owner)
         {
+            if (!orders.ContainsKey(owner)) return new Dictionary<long, OrderModel>();
             return orders[owner];
         }
     }

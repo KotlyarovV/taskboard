@@ -109,3 +109,12 @@ C:\Users\User\Desktop\taskboard-master\taskboard-master\JsonDataBase\obj\Debug\S
 C:\Users\User\Desktop\taskboard-master\taskboard-master\JsonDataBase\obj\Debug\SerializableDataBase.csproj.CopyComplete
 C:\Users\User\Desktop\taskboard-master\taskboard-master\JsonDataBase\obj\Debug\JsonDataBase.dll
 C:\Users\User\Desktop\taskboard-master\taskboard-master\JsonDataBase\obj\Debug\JsonDataBase.pdb
+C:\Users\User\Desktop\gipo\taskboard\JsonDataBase\bin\Debug\JsonDataBase.dll
+C:\Users\User\Desktop\gipo\taskboard\JsonDataBase\bin\Debug\JsonDataBase.pdb
+C:\Users\User\Desktop\gipo\taskboard\JsonDataBase\bin\Debug\netstandard.dll
+C:\Users\User\Desktop\gipo\taskboard\JsonDataBase\bin\Debug\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\User\Desktop\gipo\taskboard\JsonDataBase\obj\Debug\SerializableDataBase.csprojAssemblyReference.cache
+C:\Users\User\Desktop\gipo\taskboard\JsonDataBase\obj\Debug\SerializableDataBase.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\gipo\taskboard\JsonDataBase\obj\Debug\SerializableDataBase.csproj.CopyComplete
+C:\Users\User\Desktop\gipo\taskboard\JsonDataBase\obj\Debug\JsonDataBase.dll
+C:\Users\User\Desktop\gipo\taskboard\JsonDataBase\obj\Debug\JsonDataBase.pdb

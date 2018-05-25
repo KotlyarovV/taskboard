@@ -9238,11 +9238,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\taskboard-master\\taskboard-master\\TaskBoard\\TaskBoard.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\gipo\\taskboard\\TaskBoard\\TaskBoard.csproj",
       "projectName": "TaskBoard",
-      "projectPath": "C:\\Users\\User\\Desktop\\taskboard-master\\taskboard-master\\TaskBoard\\TaskBoard.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\gipo\\taskboard\\TaskBoard\\TaskBoard.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\taskboard-master\\taskboard-master\\TaskBoard\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\gipo\\taskboard\\TaskBoard\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -9261,8 +9261,8 @@
       "frameworks": {
         "net462": {
           "projectReferences": {
-            "C:\\Users\\User\\Desktop\\taskboard-master\\taskboard-master\\JsonDataBase\\SerializableDataBase.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\taskboard-master\\taskboard-master\\JsonDataBase\\SerializableDataBase.csproj"
+            "C:\\Users\\User\\Desktop\\gipo\\taskboard\\JsonDataBase\\SerializableDataBase.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\gipo\\taskboard\\JsonDataBase\\SerializableDataBase.csproj"
             }
           }
         }
