@@ -1,4 +1,4 @@
-﻿@model TaskBoard.Models.OrderModel
+﻿@model DataBaseConnector.OrderModel
 @{
     ViewData["Title"] = "Edit";
     Layout = "_BasicLayout";
@@ -20,16 +20,16 @@
                     <select id="offerCategory" required name="Theme" class="form-control">
                         <option disabled value=''>Выберите категорию...</option>
                         <option
-                                @if (Model.Theme == TaskBoard.Models.Enums.OrderTheme.Languages) { @Html.Raw("selected"); } 
+                                @if (Model.Theme == DataBaseConnector.OrderTheme.Languages) { @Html.Raw("selected"); } 
                                 value="Languages">Языки</option>
                         <option
-                                @if (Model.Theme == TaskBoard.Models.Enums.OrderTheme.Math) { @Html.Raw("selected"); } 
+                                @if (Model.Theme == DataBaseConnector.OrderTheme.Math) { @Html.Raw("selected"); } 
                                 value="Math">Математика</option>
                         <option
-                                @if (Model.Theme == TaskBoard.Models.Enums.OrderTheme.Phisic) { @Html.Raw("selected"); } 
+                                @if (Model.Theme == DataBaseConnector.OrderTheme.Phisic) { @Html.Raw("selected"); } 
                                 value="Phisic">Физика</option>
                         <option
-                                @if (Model.Theme == TaskBoard.Models.Enums.OrderTheme.PipeRepair) { @Html.Raw("selected"); } 
+                                @if (Model.Theme == DataBaseConnector.OrderTheme.PipeRepair) { @Html.Raw("selected"); } 
                                 value="PipeRepair">Починка труб</option>
                     </select>
                 </div>
@@ -58,13 +58,13 @@
                     <select id="offerWay" required name="ImplementationMethod" class="form-control">
                         <option disabled value=''>Выберите способ выполнения</option>
                         <option 
-                                @if (Model.ImplementationMethod == TaskBoard.Models.Enums.ImplementationMethod.Remotely) { @Html.Raw("selected"); } 
+                                @if (Model.ImplementationMethod == DataBaseConnector.ImplementationMethod.Remotely) { @Html.Raw("selected"); } 
                                 value ="Remotely">Удаленно</option>
                         <option
-                                @if (Model.ImplementationMethod == TaskBoard.Models.Enums.ImplementationMethod.InPlace) { @Html.Raw("selected"); } 
+                                @if (Model.ImplementationMethod == DataBaseConnector.ImplementationMethod.InPlace) { @Html.Raw("selected"); } 
                                 value="InPlace">Лично</option>
                         <option 
-                                @if (Model.ImplementationMethod == TaskBoard.Models.Enums.ImplementationMethod.Other) { @Html.Raw("selected"); } 
+                                @if (Model.ImplementationMethod == DataBaseConnector.ImplementationMethod.Other) { @Html.Raw("selected"); } 
                                 value="Other">Другой</option>
                     </select>
                 </div>
@@ -73,13 +73,13 @@
                     <select required id="offerContact" name="ConnectionMethod" class="form-control">
                         <option disabled value=''>Выберите способ связи с исполнителем</option>
                         <option
-                                @if (Model.ConnectionMethod == TaskBoard.Models.Enums.ConnectionMethod.Internet) { @Html.Raw("selected"); } 
+                                @if (Model.ConnectionMethod == DataBaseConnector.ConnectionMethod.Internet) { @Html.Raw("selected"); } 
                                 value="Internet">Интернет</option>
                         <option
-                                @if (Model.ConnectionMethod == TaskBoard.Models.Enums.ConnectionMethod.Phone) { @Html.Raw("selected"); } 
+                                @if (Model.ConnectionMethod == DataBaseConnector.ConnectionMethod.Phone) { @Html.Raw("selected"); } 
                                 value="Phone">Сотовая связь</option>
                         <option
-                                @if (Model.ConnectionMethod == TaskBoard.Models.Enums.ConnectionMethod.Other) { @Html.Raw("selected"); } 
+                                @if (Model.ConnectionMethod == DataBaseConnector.ConnectionMethod.Other) { @Html.Raw("selected"); } 
                                 value="Other">Другой</option>
                     </select>
                 </div>

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using DataBaseConnector;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -16,6 +17,10 @@ namespace TaskBoard
         {
             services
                 .AddSingleton<UniqueNameService>()
+                .AddSingleton<UserContext>()
+                .AddSingleton<OrderContext>()
+                .AddSingleton<AdminContext>()
+                .AddSingleton<FinancicalAccountContext>()
                 .AddSingleton<IFileRepository, FileRepository>()
                 .AddSingleton<IFinanceRepository, FinanceRepository>()
                 .AddSingleton<IUserRepository, UserRepository>()

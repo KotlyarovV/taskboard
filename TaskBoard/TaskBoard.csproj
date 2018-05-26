@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\JsonDataBase\SerializableDataBase.csproj" />
+    <ProjectReference Include="..\DataBaseConnector\DataBaseConnector.csproj" />
   </ItemGroup>
 
   <ItemGroup>

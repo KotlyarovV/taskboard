@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataBaseConnector;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TaskBoard.Data;
@@ -31,7 +32,7 @@ namespace TaskBoard.Controllers
 
         // Possible CSRF leak
         [Authorize(Roles = "user")]
-        public IActionResult Delete(long orderId)
+        public IActionResult Delete(string orderId)
         {
             string login =  User.Identity.Name;
             _orderRepository.RemoveOrder(login, orderId);
@@ -40,7 +41,7 @@ namespace TaskBoard.Controllers
 
         [Authorize(Roles = "user")]
         [HttpGet]
-        public IActionResult Edit(long orderId)
+        public IActionResult Edit(string orderId)
         {
             string login = User.Identity.Name;
             return View(_orderRepository.GetUserOrdersList(login)[orderId]);
@@ -59,62 +60,68 @@ namespace TaskBoard.Controllers
         }
 
         [Authorize(Roles = "user")]
-        public IActionResult ChooseDoer(long orderId)
+        [Route("[controller]/[action]/{*orderId}")]
+        public IActionResult ChooseDoer(string orderId)
         {
             string login = User.Identity.Name;
+            var orders = _orderRepository.GetUserOrdersList(login);
             ViewBag.OrderId = orderId;
-            if (_orderRepository.GetUserOrdersList(login)[orderId].DoerCandidates == null)
+            if (orders[orderId].DoerCandidates == null)
             {
-                _orderRepository.GetUserOrdersList(login)[orderId].DoerCandidates = new List<string>();
+                orders[orderId].DoerCandidates = new List<string>();
             }
-            return View(_orderRepository.GetUserOrdersList(login)[orderId].DoerCandidates);
+            return View(orders[orderId].DoerCandidates);
         }
 
         [Authorize(Roles = "user")]
-        public IActionResult ChooseDoerAction(long orderId, string doerLogin)
+        public IActionResult ChooseDoerAction(string orderId, string doerLogin)
         {
             string login = User.Identity.Name;
-            if (_orderRepository.GetUserOrdersList(login).ContainsKey(orderId))
+            var orders = _orderRepository.GetUserOrdersList(login);
+            if (orders.ContainsKey(orderId))
             {
-                if (!String.IsNullOrEmpty(_orderRepository.GetUserOrdersList(login)[orderId].Doer))
+                if (!String.IsNullOrEmpty(orders[orderId].Doer))
                 {
                     ViewBag.Body = "Исполнитель уже выбран";
                     return View("Message");
                 }
-                
-                _orderRepository.GetUserOrdersList(login)[orderId].Doer = doerLogin;
-                _orderRepository.GetUserOrdersList(login)[orderId].DoerCandidates = new List<string>();
+                var order = _orderRepository.GetUserOrdersList(login)[orderId];
+                order.Doer = doerLogin;
+                order.DoerCandidates = new List<string>();
+                _orderRepository.UpdateOrder(login, order);
             }
             return Redirect("~/UserOrders/Index");
         }
 
         [Authorize(Roles = "user")]
-        public IActionResult ApplyAsDoer(long orderId, string ownerLogin, string doerLogin)
+        public IActionResult ApplyAsDoer(string orderId, string ownerLogin, string doerLogin)
         {
-            //
-            if (_orderRepository.GetUserOrdersList(ownerLogin).ContainsKey(orderId))
+            var ordersOfUser = _orderRepository.GetUserOrdersList(ownerLogin);
+            if (ordersOfUser.ContainsKey(orderId))
             {
-                UserModel doer = _userRepository.GetUser(doerLogin);
+                var order = ordersOfUser[orderId];
+                var doer = _userRepository.GetUser(doerLogin);
                 if (doer != null)
                 {
-                    if (_orderRepository.GetUserOrdersList(ownerLogin)[orderId].DoerCandidates == null)
+                    if (order.DoerCandidates == null)
                     {
-                        _orderRepository.GetUserOrdersList(ownerLogin)[orderId].DoerCandidates = new List<string> { doerLogin };
+                        order.DoerCandidates = new List<string> { doerLogin };
                     }
                     else
                     {
-                        List<string> doers = _orderRepository.GetUserOrdersList(ownerLogin)[orderId].DoerCandidates.ToList();
+                        List<string> doers = order.DoerCandidates.ToList();
                         doers.Add(doerLogin);
-                        _orderRepository.GetUserOrdersList(ownerLogin)[orderId].DoerCandidates = doers;
+                        order.DoerCandidates = doers;
                     }
+                    _orderRepository.UpdateOrder(ownerLogin, order);
                 }
                 
             }
-                return Redirect("~/TaskBoard/Index");
+            return Redirect("~/TaskBoard/Index");
         }
 
         [Authorize(Roles = "user")]
-        public IActionResult WorkBoard(long orderId, string owner)
+        public IActionResult WorkBoard(string orderId, string owner)
         {
             if (String.IsNullOrEmpty(_orderRepository.GetUserOrdersList(owner)[orderId].Doer))
             {
@@ -130,19 +137,22 @@ namespace TaskBoard.Controllers
         }
 
         [Authorize(Roles = "user")]
-        public IActionResult Accept(long orderId)
+        public IActionResult Accept(string orderId)
         {
-            string login = User.Identity.Name;
-            _orderRepository.GetUserOrdersList(login)[orderId].IsCompleted = true;
+            var login = User.Identity.Name;
+            var order = _orderRepository.GetUserOrdersList(login)[orderId];
+            order.IsCompleted = true;
+            _orderRepository.UpdateOrder(login, order);
             return Redirect("/userOrders/Workboard?orderId=" + orderId + "&owner=" + login);
         }
 
         [Authorize(Roles = "user")]
         public IActionResult OrdersToDo()
         {
-            string login = User.Identity.Name;
-            _orderRepository.GetOrdersList(0).Where(orderModel => orderModel.Doer.Equals(login));
-            return View(_orderRepository.GetOrdersList(0).Where(orderModel => !String.IsNullOrEmpty(orderModel.Doer) && orderModel.Doer.Equals(login)));
+            var login = User.Identity.Name;
+            var ordersFromR = _orderRepository.GetOrdersList(0).ToList();
+            var orders = _orderRepository.GetOrdersList(0).Where(orderModel => orderModel.Doer == login).ToList();
+            return View(orders);
         }
     }
 }

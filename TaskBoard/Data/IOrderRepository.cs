@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataBaseConnector;
 using TaskBoard.Models;
 
 namespace TaskBoard.Data
@@ -10,8 +11,8 @@ namespace TaskBoard.Data
     {
         IOrderRepository SaveOrder(string owner, OrderModel orderModel);
         IEnumerable<OrderModel> GetOrdersList(int listNumber);
-        Dictionary<long, OrderModel> GetUserOrdersList(string owner);
-        bool RemoveOrder(string owner, long orderId);
+        Dictionary<string, OrderModel> GetUserOrdersList(string owner);
+        bool RemoveOrder(string owner, string orderId);
         bool UpdateOrder(string owner, OrderModel orderModel);
     }
 }

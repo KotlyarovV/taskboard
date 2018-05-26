@@ -2,28 +2,34 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TaskBoard.Models.Finance;
+using DataBaseConnector;
 
 namespace TaskBoard.Data
 {
     public class FinanceRepository : IFinanceRepository
     {
-        private List<FinancialAccount> _accounts = new List<FinancialAccount>();
+        private FinancicalAccountContext _accountContext;
+        public FinanceRepository(FinancicalAccountContext financicalAccountContext)
+        {
+            _accountContext = financicalAccountContext;
+        }
+
+
         public IFinanceRepository AddAccount(string owner)
         {
-            var account = new FinancialAccount
-            {
-                Balance = 0,
-                Operations = new List<FinancialOperation>() { new FinancialOperation() { Date = DateTime.Now, LoginFrom = owner, LoginTo = "ff", Amount = 1} }
-            };
-            account.Owner = owner;
-            _accounts.Add(account);
+            _accountContext.AddAccount(owner);
             return this;
         }
 
         public FinancialAccount GetAccount(string owner)
         {
-            return _accounts.First(acc => acc.Owner == owner);
+            var account = _accountContext.GetAccount(owner);
+            if (account == null)
+            {
+                AddAccount(owner);
+            }
+
+            return _accountContext.GetAccount(owner);
         }
     }
 }

@@ -330,8 +330,6 @@ C:\Users\Vitaly\source\repos\TaskBoard\TaskBoard\bin\Debug\net462\refs\System.Xm
 C:\Users\Vitaly\source\repos\TaskBoard\TaskBoard\bin\Debug\net462\Microsoft.VisualStudio.Web.BrowserLink.dll
 C:\Users\Vitaly\source\repos\TaskBoard\TaskBoard\obj\Debug\net462\TaskBoard.exe
 C:\Users\Vitaly\source\repos\TaskBoard\TaskBoard\obj\Debug\net462\TaskBoard.pdb
-C:\Users\Vitaly\source\repos\TaskBoard\TaskBoard\bin\Debug\net462\JsonDataBase.dll
-C:\Users\Vitaly\source\repos\TaskBoard\TaskBoard\bin\Debug\net462\JsonDataBase.pdb
 C:\Users\Vitaly\source\repos\TaskBoard\TaskBoard\bin\Debug\net462\Microsoft.AspNetCore.Authentication.dll
 C:\Users\Vitaly\source\repos\TaskBoard\TaskBoard\bin\Debug\net462\Microsoft.AspNetCore.Authentication.Cookies.dll
 C:\Users\User\Desktop\taskboard-master\taskboard-master\TaskBoard\bin\Debug\net462\TaskBoard.exe.config
@@ -1010,3 +1008,15 @@ C:\Users\User\Desktop\gipo\taskboard\TaskBoard\obj\Debug\net462\TaskBoard.exe
 C:\Users\User\Desktop\gipo\taskboard\TaskBoard\obj\Debug\net462\TaskBoard.pdb
 C:\Users\User\Desktop\gipo\taskboard\TaskBoard\bin\Debug\net462\Microsoft.Office.Interop.Excel.dll
 C:\Users\User\Desktop\gipo\taskboard\TaskBoard\bin\Debug\net462\Microsoft.Office.Interop.Word.dll
+C:\Users\Vitaly\source\repos\taskboard\TaskBoard\bin\Debug\net462\Microsoft.Office.Interop.Excel.dll
+C:\Users\Vitaly\source\repos\taskboard\TaskBoard\bin\Debug\net462\Microsoft.Office.Interop.Word.dll
+C:\Users\Vitaly\source\repos\taskboard\TaskBoard\bin\Debug\net462\DataBaseConnector.dll
+C:\Users\Vitaly\source\repos\taskboard\TaskBoard\bin\Debug\net462\MongoDB.Bson.dll
+C:\Users\Vitaly\source\repos\taskboard\TaskBoard\bin\Debug\net462\MongoDB.Driver.dll
+C:\Users\Vitaly\source\repos\taskboard\TaskBoard\bin\Debug\net462\MongoDB.Driver.Core.dll
+C:\Users\Vitaly\source\repos\taskboard\TaskBoard\bin\Debug\net462\DnsClient.dll
+C:\Users\Vitaly\source\repos\taskboard\TaskBoard\bin\Debug\net462\DataBaseConnector.pdb
+C:\Users\Vitaly\source\repos\taskboard\TaskBoard\bin\Debug\net462\MongoDB.Bson.xml
+C:\Users\Vitaly\source\repos\taskboard\TaskBoard\bin\Debug\net462\MongoDB.Driver.xml
+C:\Users\Vitaly\source\repos\taskboard\TaskBoard\bin\Debug\net462\MongoDB.Driver.Core.xml
+C:\Users\Vitaly\source\repos\taskboard\TaskBoard\bin\Debug\net462\DnsClient.xml

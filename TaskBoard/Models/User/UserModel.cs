@@ -1,4 +1,4 @@
-﻿using TaskBoard.Models.Enums;
+﻿using DataBaseConnector;
 
 namespace TaskBoard.Models.User
 {

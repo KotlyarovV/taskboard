@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
-using SerializableDataBase;
 using TaskBoard.Data;
 using TaskBoard.Infrastucture;
 using TaskBoard.Models.User;

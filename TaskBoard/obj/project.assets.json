@@ -2475,13 +2475,13 @@
           "lib/net46/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "SerializableDataBase/1.0.0": {
+      "DataBaseConnector/1.0.0": {
         "type": "project",
         "compile": {
-          "bin/placeholder/SerializableDataBase.dll": {}
+          "bin/placeholder/DataBaseConnector.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SerializableDataBase.dll": {}
+          "bin/placeholder/DataBaseConnector.dll": {}
         }
       }
     },
@@ -4818,13 +4818,13 @@
           "lib/net46/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "SerializableDataBase/1.0.0": {
+      "DataBaseConnector/1.0.0": {
         "type": "project",
         "compile": {
-          "bin/placeholder/SerializableDataBase.dll": {}
+          "bin/placeholder/DataBaseConnector.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SerializableDataBase.dll": {}
+          "bin/placeholder/DataBaseConnector.dll": {}
         }
       }
     }
@@ -8512,7 +8512,7 @@
       ]
     },
     "System.Security.Cryptography.Xml/4.4.2": {
-      "sha512": "q9Dren/YP5jhRCkDvLfuaPpMTQzP97ANvzq/OoGgwK8YdLRSTABS9oW5/23OKoM2DRCuBrh4qaecD2YNhPtuzQ==",
+      "sha512": "1m+fKVrApgKYMRuE0MF0vGjqy4XqAp1rCtyAzMXhJajMDDytMh/rHk9hp4M7KKk3QQZoWJUvyUY7xcw74w+JiQ==",
       "type": "package",
       "path": "system.security.cryptography.xml/4.4.2",
       "files": [
@@ -9267,14 +9267,15 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
-    "SerializableDataBase/1.0.0": {
+    "DataBaseConnector/1.0.0": {
       "type": "project",
-      "path": "../JsonDataBase/SerializableDataBase.csproj",
-      "msbuildProject": "../JsonDataBase/SerializableDataBase.csproj"
+      "path": "../DataBaseConnector/DataBaseConnector.csproj",
+      "msbuildProject": "../DataBaseConnector/DataBaseConnector.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.2": [
+      "DataBaseConnector >= 1.0.0",
       "Microsoft.AspNetCore >= 2.0.1",
       "Microsoft.AspNetCore.Authentication.Cookies >= 2.0.4",
       "Microsoft.AspNetCore.Mvc >= 2.0.1",
@@ -9285,29 +9286,34 @@
       "Microsoft.Office.Interop.Excel >= 15.0.4795.1000",
       "Microsoft.Office.Interop.Word >= 15.0.4797.1003",
       "Microsoft.VisualStudio.Web.BrowserLink >= 2.0.1",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.1",
-      "SerializableDataBase >= 1.0.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\Vitaly\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\gipo\\taskboard\\TaskBoard\\TaskBoard.csproj",
+      "projectUniqueName": "C:\\Users\\Vitaly\\source\\repos\\taskboard\\TaskBoard\\TaskBoard.csproj",
       "projectName": "TaskBoard",
-      "projectPath": "C:\\Users\\User\\Desktop\\gipo\\taskboard\\TaskBoard\\TaskBoard.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\gipo\\taskboard\\TaskBoard\\obj\\",
+      "projectPath": "C:\\Users\\Vitaly\\source\\repos\\taskboard\\TaskBoard\\TaskBoard.csproj",
+      "packagesPath": "C:\\Users\\Vitaly\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vitaly\\source\\repos\\taskboard\\TaskBoard\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Vitaly\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "net462"
@@ -9319,8 +9325,8 @@
       "frameworks": {
         "net462": {
           "projectReferences": {
-            "C:\\Users\\User\\Desktop\\gipo\\taskboard\\JsonDataBase\\SerializableDataBase.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\gipo\\taskboard\\JsonDataBase\\SerializableDataBase.csproj"
+            "C:\\Users\\Vitaly\\source\\repos\\taskboard\\DataBaseConnector\\DataBaseConnector.csproj": {
+              "projectPath": "C:\\Users\\Vitaly\\source\\repos\\taskboard\\DataBaseConnector\\DataBaseConnector.csproj"
             }
           }
         }
